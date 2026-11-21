@@ -1,0 +1,340 @@
+/* =================================
+  CONFIGURACION GENERAL
+================================= */
+* {
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+   font-family: Arial, sans-serif;
+}
+html {
+   scroll-behavior: smooth;
+}
+body {
+   background: #101010;
+   color: white;
+}
+/* =================================
+  PORTADA PRINCIPAL
+================================= */
+.portada {
+   min-height: 550px;
+   display: grid !important;
+   grid-template-columns: 1.1fr 0.9fr;
+   align-items: center;
+   gap: 35px;
+   padding: 50px 7%;
+   background: linear-gradient(90deg, #050505, #222);
+}
+/* LADO IZQUIERDO */
+.portada-contenido {
+   max-width: 650px;
+   width: 100%;
+}
+.subtitulo {
+   color: #b7ff00;
+   letter-spacing: 4px;
+   font-size: 13px;
+   margin-bottom: 15px;
+}
+.portada h1 {
+   font-size: 48px;
+   line-height: 1.2;
+   margin-bottom: 20px;
+}
+.portada-contenido p {
+   margin-bottom: 20px;
+}
+/* BOTON */
+.boton {
+   display: inline-block;
+   background: #b7ff00;
+   color: black;
+   padding: 14px 25px;
+   text-decoration: none;
+   font-weight: bold;
+   border-radius: 4px;
+}
+.boton:hover {
+   background: white;
+}
+/* =================================
+  LADO DERECHO DE LA PORTADA
+================================= */
+.portada-lateral {
+   width: 100%;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: center;
+   gap: 22px;
+}
+/* MENU */
+.menu-portada {
+   width: 100%;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   gap: 20px;
+   flex-wrap: nowrap;
+}
+.menu-portada a {
+   color: white;
+   text-decoration: none;
+   font-size: 14px;
+   font-weight: bold;
+   white-space: nowrap;
+}
+.menu-portada a:hover {
+   color: #b7ff00;
+}
+/* LOGO */
+.portada-lateral .logo {
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   width: 100%;
+}
+.portada-lateral .logo img {
+   width: 150px;
+   height: 115px;
+   max-width: 100%;
+   object-fit: contain;
+   display: block;
+}
+/* BUSCADOR */
+#buscador {
+   background: #222;
+   color: white;
+   border: 1px solid #444;
+   padding: 13px;
+   border-radius: 5px;
+   outline: none;
+   width: 75%;
+   max-width: 280px;
+}
+#buscador:focus {
+   border-color: #b7ff00;
+}
+/* =================================
+  INPUTS GENERALES
+================================= */
+input, select {
+   background: #222;
+   color: white;
+   border: 1px solid #444;
+   padding: 12px;
+   border-radius: 5px;
+   outline: none;
+}
+input:focus, select:focus {
+   border-color: #b7ff00;
+}
+/* =================================
+  CATALOGO
+================================= */
+.catalogo, .administracion {
+   padding: 65px 7%;
+   text-align: center;
+}
+.catalogo h2, .administracion h2 {
+   font-size: 30px;
+   margin-bottom: 30px;
+}
+/* CATEGORIAS */
+.categorias {
+   margin-bottom: 30px;
+   display: flex;
+   justify-content: center;
+   flex-wrap: wrap;
+   gap: 8px;
+}
+/* BOTONES */
+button {
+   background: #b7ff00;
+   color: black;
+   border: none;
+   border-radius: 4px;
+   padding: 12px 18px;
+   font-weight: bold;
+   cursor: pointer;
+}
+button:hover {
+   background: white;
+}
+/* =================================
+  PRODUCTOS
+================================= */
+.productos {
+   display: grid;
+   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+   gap: 25px;
+   text-align: left;
+}
+.producto {
+   background: #1c1c1c;
+   padding: 15px;
+   border-radius: 8px;
+   transition: transform 0.2s;
+}
+.producto:hover {
+   transform: translateY(-5px);
+}
+.producto img {
+   width: 100%;
+   height: 270px;
+   object-fit: cover;
+   border-radius: 5px;
+}
+.producto h3 {
+   margin: 13px 0 8px;
+}
+.producto p {
+   color: #bbb;
+   margin: 8px 0;
+}
+.producto .precio {
+   color: #b7ff00;
+   font-size: 21px;
+   font-weight: bold;
+}
+.producto select,
+.producto input {
+   width: 100%;
+   margin: 7px 0;
+}
+.producto button {
+   width: 100%;
+   margin-top: 8px;
+}
+.stock-texto {
+   font-size: 13px;
+}
+#mensajeCarga {
+   color: #b7ff00;
+   margin: 20px;
+}
+/* =================================
+  ADMINISTRACION
+================================= */
+.administracion {
+   background: #181818;
+}
+.login {
+   max-width: 400px;
+   margin: auto;
+   background: #222;
+   padding: 25px;
+   border-radius: 8px;
+}
+.login input,
+.login button {
+   display: block;
+   width: 100%;
+   margin: 12px 0;
+}
+.formulario {
+   max-width: 700px;
+   margin: 25px auto 40px;
+   padding: 25px;
+   background: #222;
+   border-radius: 8px;
+}
+.formulario input,
+.formulario select {
+   width: 100%;
+   margin: 7px 0;
+}
+.formulario h4 {
+   margin: 18px 0 8px;
+   color: #b7ff00;
+}
+.formulario button {
+   margin: 10px 5px;
+}
+.secundario {
+   background: #444;
+   color: white;
+}
+/* INVENTARIO */
+.item-admin {
+   background: #252525;
+   max-width: 700px;
+   margin: 12px auto;
+   padding: 18px;
+   border-radius: 6px;
+   text-align: left;
+}
+.item-admin p {
+   color: #bbb;
+   margin: 7px 0;
+}
+.item-admin button {
+   margin: 8px 5px 0 0;
+}
+/* =================================
+  PIE DE PAGINA
+================================= */
+footer {
+   text-align: center;
+   padding: 35px;
+   background: black;
+   color: #aaa;
+}
+footer h2 {
+   margin-bottom: 12px;
+}
+footer span {
+   color: #b7ff00;
+}
+footer p {
+   margin: 8px;
+}
+/* =================================
+  ADAPTACION PARA CELULARES
+================================= */
+@media (max-width: 700px) {
+   .portada {
+       grid-template-columns: 1fr;
+       min-height: auto;
+       padding: 45px 20px;
+       gap: 40px;
+   }
+   .portada-contenido {
+       text-align: center;
+   }
+   .portada h1 {
+       font-size: 34px;
+   }
+   .portada-lateral {
+       gap: 18px;
+   }
+   .menu-portada {
+       gap: 12px;
+   }
+   .menu-portada a {
+       font-size: 11px;
+   }
+   .portada-lateral .logo img {
+       width: 125px;
+       height: 95px;
+   }
+   #buscador {
+       width: 90%;
+   }
+   .catalogo,
+   .administracion {
+       padding: 45px 5%;
+   }
+   .catalogo h2,
+   .administracion h2 {
+       font-size: 25px;
+   }
+   .productos {
+       grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+       gap: 12px;
+   }
+   .producto img {
+       height: 200px;
+   }
+}

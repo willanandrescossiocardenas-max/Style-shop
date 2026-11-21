@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>STYLE SHOP | Streetwear</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<section class="portada" id="inicio">
+<!-- LADO IZQUIERDO -->
+<div class="portada-contenido">
+<p class="subtitulo">NUEVA COLECCIÓN 2026</p>
+<h1>VISTE DIFERENTE.<br>MARCA TU ESTILO.</h1>
+<p>Descubre nuestra colección streetwear.</p>
+<a href="#productos" class="boton">VER PRODUCTOS</a>
+</div>
+<!-- LADO DERECHO -->
+<div class="portada-lateral">
+<nav class="menu-portada">
+<a href="#inicio">Inicio</a>
+<a href="#productos">Productos</a>
+<a href="#admin">Administración</a>
+</nav>
+<a href="#inicio" class="logo">
+<img src="https://i.ibb.co/QjnD3wFZ/116-D676-B-19-BA-4-E04-AB5-B-8822721-E91-B2.png" alt="STYLE SHOP">
+</a>
+<input type="search" id="buscador" placeholder="Buscar prendas...">
+</div>
+</section>
+<main>
+<section class="catalogo" id="productos">
+<p class="subtitulo">STYLE SHOP COLLECTION</p>
+<h2>NUESTROS PRODUCTOS</h2>
+<div class="categorias">
+<button onclick="filtrar('Todos')">Todos</button>
+<button onclick="filtrar('Poleras')">Poleras</button>
+<button onclick="filtrar('Hoodies')">Hoodies</button>
+<button onclick="filtrar('Pantalones')">Pantalones</button>
+<button onclick="filtrar('Shorts')">Shorts</button>
+<button onclick="filtrar('Gorras')">Gorras</button>
+<button onclick="filtrar('Chaquetas')">Chaquetas</button>
+<button onclick="filtrar('Camisas')">Camisas</button>
+<button onclick="filtrar('Conjuntos')">Conjuntos</button>
+</div>
+<p id="mensajeCarga">Cargando productos...</p>
+<div id="listaProductos" class="productos"></div>
+</section>
+<section class="administracion" id="admin">
+<p class="subtitulo">GESTIÓN DE LA TIENDA</p>
+<h2>PANEL DE ADMINISTRACIÓN</h2>
+<div id="login" class="login">
+<h3>Iniciar sesión</h3>
+<input type="text" id="usuario" placeholder="Usuario">
+<input type="password" id="password" placeholder="Contraseña">
+<button onclick="iniciarSesion()">INGRESAR</button>
+</div>
+<div id="panel" style="display:none;">
+<h3 id="tituloFormulario">Agregar producto</h3>
+<div class="formulario">
+<input id="nombre" placeholder="Nombre del producto">
+<input id="descripcion" placeholder="Descripción">
+<input id="precio" type="number" min="0" placeholder="Precio en Bs">
+<input id="imagen" placeholder="URL de la imagen">
+<select id="categoria">
+<option value="Poleras">Poleras</option>
+<option value="Hoodies">Hoodies</option>
+<option value="Pantalones">Pantalones</option>
+<option value="Shorts">Shorts</option>
+<option value="Gorras">Gorras</option>
+<option value="Chaquetas">Chaquetas</option>
+<option value="Camisas">Camisas</option>
+<option value="Conjuntos">Conjuntos</option>
+</select>
+<input id="talla" placeholder="Tallas: S,M,L,XL o Unica">
+<h4>Stock por talla</h4>
+<input id="stock" type="number" min="0" placeholder="Stock total (para talla única)">
+<input id="stockS" type="number" min="0" placeholder="Stock S">
+<input id="stockM" type="number" min="0" placeholder="Stock M">
+<input id="stockL" type="number" min="0" placeholder="Stock L">
+<input id="stockXL" type="number" min="0" placeholder="Stock XL">
+<button onclick="guardarProducto()">GUARDAR PRODUCTO</button>
+<button class="secundario" onclick="limpiarFormulario()">LIMPIAR</button>
+</div>
+<h3>Inventario de productos</h3>
+<div id="inventario"></div>
+<button class="secundario" onclick="cerrarSesion()">CERRAR SESIÓN</button>
+</div>
+</section>
+</main>
+<footer>
+<h2>STYLE<span>SHOP.</span></h2>
+<p>Tu estilo, tus reglas.</p>
+<p>2026 STYLE SHOP</p>
+</footer>
+<script src="script.js"></script>
+</body>
+</html>
